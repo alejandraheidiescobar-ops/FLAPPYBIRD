@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project implements a hardware-driven Flappy Bird game that outputs real-time 640x480 @ 60 Hz VGA graphics using procedural combinational logic without any frame buffers or external RAM.
 
 ## How to test
 
-Explain how to use your project
+Test the design by running tt_um_flappy_bird at 25.175 MHz on VGA Playground, executing the Cocotb testbench locally with make, or deploying on Tiny Tapeout hardware using a TinyVGA PMOD and push button.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Tiny VGA Pmod driving a VGA monitor.
