@@ -1,7 +1,7 @@
 
 # Tiny Tapeout project information
 project:
-  title:        "Flappy Bird VGA Game"      # Project title
+  title:        "IEEE Flappy Bird VGA Game"      # Project title
   author:       "Escobar Mamani Alejandra Heidi"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Flappy Bird hardware game with parallax scrolling for TinyVGA PMOD"      # One line description of what your project does
