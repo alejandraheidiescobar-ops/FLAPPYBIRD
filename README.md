@@ -2,23 +2,30 @@
 
 # IEEE Flappy Bird VGA Game 🐤
 
-Welcome to the Flappy Bird VGA Game project for Tiny Tapeout! 
+Welcome to the **Flappy Bird VGA Game** for Tiny Tapeout! 
 
 ![Flappy Bird Preview](docs/FlappyBirdPreview.png)
 
-This repository contains a hardware-level digital design that generates a dynamic 640x480 VGA game using pure combinational Verilog logic and fixed-point arithmetic. 
+This project is a hardware implementation of the classic Flappy Bird game written in Verilog for 640x480 @ 60 Hz VGA displays.
 
-Designed to fit in a standard 1x1 tile, the circuit renders dynamic physics, procedural pipe gaps, parallax cloud scrolling, and an animated floor without relying on external RAM or frame buffers.
+Instead of using frame buffers or external memory, the graphics are rendered completely on-the-fly pixel by pixel. The core includes custom bitmapped ROM sprites for the bird, dual-layer parallax scrolling for background clouds, and procedural gap generation for the pipes.
+
+## 🕹️ Key Features
+
+* **Hardware-Driven Physics:** Fixed-point arithmetic (`12-bit`) to manage gravity acceleration, terminal velocity limits, and jump impulses.
+* **Procedural Pipe Gaps:** Gap heights are randomized dynamically on each wrap-around using a free-running LFSR counter.
+* **Multi-Layer Parallax Background:** Dual-speed cloud scrolling and animated checkered floor logic to create a sense of depth.
+* **Resource Efficient:** Fits entirely within a single **1x1 Tiny Tapeout tile** using pure Verilog logic without external RAM.
 
 ## 📖 Project Documentation
 
-To keep this repository clean, the detailed explanation of the hardware architecture and testing instructions have been moved to the documentation folder.
+For a complete technical breakdown and setup instructions, please visit the documentation folder:
 
-For a comprehensive breakdown of the project, including:
-* How the finite state machine (FSM), fixed-point bird physics, and procedural pipe generation work.
-* Step-by-step instructions for web simulation, local Cocotb testbenches, and physical hardware deployment using TinyVGA PMOD.
+* Hardware FSM architecture and collision detection logic.
+* Fixed-point physics equations and sprite ROM definitions.
+* Testbench setup with Cocotb and deployment guides for the **TinyVGA PMOD**.
 
-**Please refer to the project documentation located at [`docs/info.md`](docs/info.md).**
+👉 **Check out the detailed documentation at [`docs/info.md`](docs/info.md)**
 
 ## Resources
 
